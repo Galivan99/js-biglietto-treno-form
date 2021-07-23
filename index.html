@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Acquista il biglietto per il tuo prossimo viaggio</title>
+
+     <link rel="shortcut icon" href="https://www.italotreno.it/Content/favicon/android-chrome-192x192.png" type="png"> <!--tocco di classe -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header>
+        <h1>Calcola il prezzo del tuo biglietto</h1>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- Generatore prezzo biglietto -->
+        <section id="ticket_info">
+            <div class="info_box">
+
+                <!-- Dati da inserire per calcolare il prezzo del biglietto -->
+                <div class="info_row">
+
+                    <!-- Sezione NOME + COGNOME -->
+                    <div class="info_col">
+                        <label for="name">Nome e Cognome</label>
+                        <input type="text" name="" id="name" placeholder="Inserisci il nome">
+                    </div>
+
+                    <!-- Sezione Km -->
+                    <div class="info_col">
+                        <label for="">Km da percorrere</label>
+                        <input type="number" name="" id="km" min="1">
+                    </div>
+
+                    <!-- Sezione fascia d'età -->
+                    <div class="info_col">
+                        <label for="">Fascia d'età</label>
+                        <select name="" id="age">
+                            <option value="under18">Minorenne</option>
+                            <option value="over18">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Pulsanti di input -->
+                <div class="info_row center">
+                    <a id="generate" class="btn">Genera</a>
+                    <a id="erase" class="btn">Annulla</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dettagli biglietto generato -->
+        <section class="ticket_detail">
+            <h2>Il tuo biglietto</h2>
+            <div id="detail_box" class="hidden">
+                <h3>Dettaglio passeggeri</h3>
+
+                <!-- Nominativo cliente -->
+                <div class="detail_container">
+                    <div class="detail_name">
+                        <h4>Nome e Cognome passeggero</h4>
+                        <p id="passenger_name"></p>
+                    </div>
+
+                    <!-- Tabella Informazioni biglietto -->
+                    <div class="detail_info">
+                        <table>
+                            <tr>
+                                <th>Offerta</th>
+                                <th>Carrozza</th>
+                                <th>Codice CP</th>
+                                <th>Costo biglietto</th>
+                            </tr>
+                            <tr>
+                                <td id="discount_name"></td>
+                                <td id="carriage"></td>
+                                <td id="discount_code"></td>
+                                <td id="final_price"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <a class="btn buy">Acquista</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Link Script Javascript -->
+    <script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
